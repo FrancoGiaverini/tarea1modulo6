@@ -3,21 +3,24 @@
     <h1 class="mb-4">Gestión de Usuarios</h1>
     
     <TablaUsuarios :users="users" />
-
-   
     <RegistroUsuario @nuevo-usuario="agregarUsuario" />
+
+    <!-- Lista de personajes -->
+    <ListaPersonajes />
   </div>
 </template>
 
 <script>
 import TablaUsuarios from './TablaUsuarios.vue'
 import RegistroUsuario from './RegistroUsuario.vue'
+import ListaPersonajes from './components/ListaPersonajes.vue'
 
 export default {
   name: 'App',
   components: {
     TablaUsuarios,
-    RegistroUsuario
+    RegistroUsuario,
+    ListaPersonajes
   },
   data() {
     return {
@@ -41,3 +44,4 @@ h1 {
   color: #0d6efd;
 }
 </style>
+
